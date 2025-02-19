@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=4 uid="uid://cys3hupvejeby"]
+
+[ext_resource type="Texture2D" uid="uid://buyku37nsdpk1" path="res://PlatformerSprites/grassblock.png" id="1_2que7"]
+[ext_resource type="PackedScene" uid="uid://bqx3xers4ml6e" path="res://player.tscn" id="2_d00gk"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="3_1j58x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvy4t"]
+texture = ExtResource("1_2que7")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kttut"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_qvy4t")
+
+[node name="Node" type="Node"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(175, 0)
+tile_map_data = PackedByteArray("AAD9/wkAAAAAAAAAAAD9/wgAAAAAAAAAAAD+/wkAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAASAAkAAAAAAAAAAAATAAoAAAAAAAAAAAAUAAgAAAAAAAAAAAAVAAgAAAAAAAAAAAAWAAcAAAAAAAAAAAAXAAcAAAAAAAAAAAAYAAcAAAAAAAAAAAAZAAcAAAAAAAAAAAAaAAcAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_kttut")
+
+[node name="Player" parent="." instance=ExtResource("2_d00gk")]
+position = Vector2(243, 508)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(336, -145)
+limit_bottom = 640
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("3_1j58x")
