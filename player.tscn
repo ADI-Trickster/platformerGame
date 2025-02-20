@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqx3xers4ml6e"]
+[gd_scene load_steps=5 format=3 uid="uid://bqx3xers4ml6e"]
 
 [ext_resource type="Texture2D" uid="uid://dd5dkb4btgyh1" path="res://PlatformerSprites/boxChar.png" id="1_gnyst"]
 [ext_resource type="Script" path="res://player.gd" id="1_umjlt"]
+[ext_resource type="Texture2D" uid="uid://dakpauihwfyg" path="res://PlatformerSprites/kirbyTransparentBackgroundart.png" id="3_q2gx4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr7lg"]
 size = Vector2(64, 64)
@@ -15,3 +16,8 @@ texture = ExtResource("1_gnyst")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dr7lg")
+
+[node name="KirbyTransparentBackgroundart" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_q2gx4")
