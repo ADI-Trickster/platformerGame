@@ -8,5 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position.y = clamp(global_position.y, -100, 430)
+	global_position.y = clamp(global_position.y, -200, 430)
 	#pass
