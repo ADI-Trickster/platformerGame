@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://brmtrx7d3ekso"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_7xecp"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_7xecp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1144.0
+offset_bottom = 649.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.195034, 0.706092, 0.575871, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Platformer Game"
+
+[node name="Button" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
