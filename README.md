@@ -8,5 +8,5 @@ platformer game that you would need to to reach the end with out losing all live
  DeathBarrier when the player falls off /n
  World Layout /n
  End Flag(Winning goal) /n
- Flag sends you to win scene /n
+ Flag sends you to win scene \n
 #
