@@ -3,10 +3,14 @@ platformer game that you would need to to reach the end with out losing all live
 
 # ADDED:
  player movement
+
  enemy can damage player
+ 
 # TODO:
- DeathBarrier when the player falls off /n
- World Layout \n
+ DeathBarrier when the player falls off
+ 
+ World Layout
+ 
  End Flag(Winning goal)
+ 
  Flag sends you to win scene
-#
